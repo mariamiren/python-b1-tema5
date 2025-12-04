@@ -56,7 +56,19 @@ Exemple:
 
 # Corret and overwrite class SafeWalletCredentials here 
 class SafeWalletCredentials:
-    pass
+
+
+from ej5a3.py import SafeWalletCredentials
+
+def test_wallet():
+    wallet = SafeWalletCredentials("1, 2, 3, 4")
+    assert wallet get_password() == "1, 2, 3, 4", "Incorrect password retrieval"
+    
+    wallet.set_password("5, 6, 7, 8")
+    assert wallet get_password() == "5, 6, 7, 8", "Incorrect password setting"
+    
+
+    
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
