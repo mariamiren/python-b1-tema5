@@ -94,15 +94,29 @@ Exemple:
         True True True
 """
 
-# Write class DatabaseConnector here
+
+from ej5a4.py import *
 
 # Write class SQLDatabase here
-
+def test_connect_sql():
+    connector = DateBaseConnector()
+    sql_db = SQLDateBase()
+    connector.connect(sql_db)
+    assert sql_db_connected == True, "SQL database connection failed"
 
 # Write class PostgresDatabase here
-
+def test_connect_postgres():
+    connector = DateBaseConnector()
+    postgres_db = PostgresDateBase()
+    connector.connect(postgres_db)
+    assert postgres_db_connected == True, "Postgrade database connection failed"
 
 # Write class RedshiftDatabase here
+def connect_redshift():
+    connector = DateBaseConnector()
+    redshift_db = RedshiftDataBase()
+    connector.connect(redshift_db)
+    assert redshift_db_connected == True, "Redshift database connection failed"
 
 
 # Por la propia naturaleza del ejercicios no se puede probar imprimiendo por pantalla, 
