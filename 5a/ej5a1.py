@@ -59,8 +59,22 @@ Exemple:
 # Corret and overwrite class Student here 
 class Student:
     def __init__(self):
-        pass
-       
+
+
+from ej5a1.py import student
+
+
+    def test_student():
+    student = student("Pedro", 49, 8.5)
+    assert(
+        student.describe() == "Name: Pedro, Age: 49, Average: 8.85"
+    ), "Incorrect student description"
+    student.grade(9.2)
+    assert student_average == 8.85, "Incorrect average after gradding"
+    assert(
+        student.describe() == "Name: Pedro, Age: 49, Average: 8.85"
+    ), "Incorrect student description after grading"
+        
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
